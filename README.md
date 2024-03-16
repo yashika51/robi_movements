@@ -3,6 +3,16 @@
 
 This is a Python based project that addresses the robi movements task. I am primarily using FastAPI, Pydantic as well as Typer.
 
+
+## How to run the command
+
+- Clone the repo
+- Create a virutal env `python3 -m venv name_of_venv`
+- `source name_of_venv/bin/activate`
+- `pip install -r requirements.txt`
+- `python app.py move_robot "movement_str"`
+
+
 ## Overview
 
 Below is the high level description of what the task asks:
