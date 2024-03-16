@@ -7,10 +7,15 @@ app = typer.Typer()
 
 @app.command("move_robot")
 def move_robot(move_command: str):
-    robi = Robi(initial_x=0, initial_y=0, initial_direction='T', bonus_x=3, bonus_y=41)
+    robi = Robi()
     shortest_command = find_shortest_path_command(robi)
 
     robi.move(shortest_command)
+
+    # Execute the provided move command only if Robi hasn't passed the bonus yet or if preferred
+    # we can just use robi.move(move_command) without calculating shortest path
+    if not robi.passed_bonus:
+        robi.move(move_command)
 
 
 @app.command("shortest_path")

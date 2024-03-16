@@ -13,6 +13,18 @@ This is a Python based project that addresses the robi movements task. I am prim
 - `python app.py move_robot "movement_str"`
 
 
+## Future improvements
+
+I added models.py as a placeholder to show how pydantic types can be enforced, its specifically
+useful with the API implementation. On the same note, I added api.py file to also have the similar
+API implementation.
+
+## Additional Info
+
+- There is also the test.py file added just to have some initial tests
+- The bonus_x position(bonus_x,bonus_y) can either be provided to be constant
+   or let to be set randomly between -100 to 100
+
 ## Overview
 
 Below is the high level description of what the task asks:
@@ -24,15 +36,15 @@ In order to get the Robi to move, we need to input a move command. The move comm
 be represented with a string consisting of three alphabets L, R and F. F string will be followed by
 a positive integer X to indicate the distance of how many steps it has to move, which can be
 explained as follows:
-● L: Turn to the left from Robi current position (counterclockwise)
-● R: Turn to the right from Robi current position (clockwise)
-● FX: Move Forward for X step(s) where X can be any positive integers. For example, F12
+- L: Turn to the left from Robi current position (counterclockwise)
+- R: Turn to the right from Robi current position (clockwise)
+- FX: Move Forward for X step(s) where X can be any positive integers. For example, F12
 means moving forward for 12 steps.
 
 Initial conditions
-● Robi starts at the position (X,Y) of (0,0)
-● Robi is facing Top (T), we state Direction (D) to D:T
-● We add one Bonus item in a random (X,Y) location in the range of -100 to 100
+- Robi starts at the position (X,Y) of (0,0)
+- Robi is facing Top (T), we state Direction (D) to D:T
+ We add one Bonus item in a random (X,Y) location in the range of -100 to 100
 
 
 The example
